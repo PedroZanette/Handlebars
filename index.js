@@ -6,13 +6,19 @@ const app = express()
 app.engine("handlebars", exphbs.engine())
 app.set('view engine', 'handlebars') //colocar uma variavel que armazena temporiariamente
 
+app.get('/peixe', (req, res) => {
+    res.render('peixe')
+})
+
 app.get('/', (req, res) => { //associa uma poprieadade a uma função
     const user = {
         name: 'Karien',
         age: 34,
         email: 'karien.barbosa@edu.sc.senai.br'
     }
-    res.render('acai', {user: user}) //envia dados do acai para armazenamento em nuvem
+    const auth = true
+
+    res.render('acai', {user: user, auth}) //envia dados do acai para armazenamento em nuvem
 
 })
 
