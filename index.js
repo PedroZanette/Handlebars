@@ -18,7 +18,9 @@ app.get('/', (req, res) => { //associa uma poprieadade a uma função
     }
     const auth = true
 
-    res.render('acai', {user: user, auth}) //envia dados do acai para armazenamento em nuvem
+    const approved = true
+
+    res.render('acai', {user: user, auth, approved}) //envia dados do acai para armazenamento em nuvem
 
 })
 

@@ -1,6 +1,12 @@
 <h1>Cadê meu açaí???</h1>
 <p>A pessoa que quer açaí é {{user.name}} tem {{user.age}} anos e seu email é {{user.email}}</p>
 
+{{#if approved}}
+    <p>Parabéns, você foi mogado pelo Alê de Mocais!</p>
+{{else}}
+    <p>Deu ruim! Seu cadastro foi taxado, dados incorretos também. </p>
+{{/if}}
+
 {{#if auth}}
     <p>
         Você está originalizado, clique aqui no <a href="./peixe">clona cartão</a> para acessar a calculadora com IA avançada
